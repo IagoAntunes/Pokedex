@@ -9,7 +9,7 @@ namespace Pokedex.Servicos
 {
     public class ServicoConexao
     {
-        private static string EnderecoURL = "https://pokeapi.co/api/v2/pokemon?offset=300&limit=10";
+        //private static string EnderecoURL = "https://pokeapi.co/api/v2/pokemon?offset=300&limit=10";
 
         //public static ListaPokemons ReceberListaPokemons()
         //{
