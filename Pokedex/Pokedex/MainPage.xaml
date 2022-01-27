@@ -20,7 +20,10 @@
                             <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,10" BackgroundColor="{Binding corFundo}">
                                 <Grid RowDefinitions="Auto,Auto,60" ColumnDefinitions="Auto,Auto">
                                     <Label Grid.Row="0" Text="{Binding id,StringFormat='#{0}'}" TextColor="Black" FontSize="18"/>
-                                    <Label Grid.Row="1"  Text="{Binding name}" FontAttributes="Bold" FontSize="32" TextColor="White"/>
+                                    <Label Grid.Row="1"  Text="{Binding name}" FontAttributes="Bold" FontSize="32" TextColor="White" />
+                                    <!--<Image Grid.Row="0" Source="pontinhos10" Grid.RowSpan="2" Opacity="0.1" Aspect="AspectFit" />-->
+                                    <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="pokeball1" Aspect="AspectFill"
+                                            HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" Opacity="0.1"/>
                                     <!--<Image Grid.Row="1" HorizontalOptions="End" Source="{Binding imagem}" Aspect="AspectFill" />-->
                                     <StackLayout Grid.Row="2" Orientation="Horizontal" >
                                         <CollectionView ItemsSource="{Binding types}" x:Name="teste">
