@@ -17,21 +17,21 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,10" BackgroundColor="{Binding corFundo}">
-                                <Grid RowDefinitions="Auto,Auto,60" ColumnDefinitions="Auto,Auto">
+                            <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,10" BackgroundColor="{Binding corFundo}"> 
+                                <Grid RowDefinitions="Auto,Auto,60" ColumnDefinitions="Auto,Auto" IsClippedToBounds="True">
                                     <Label Grid.Row="0" Text="{Binding id,StringFormat='#{0}'}" TextColor="Black" FontSize="18"/>
                                     <Label Grid.Row="1"  Text="{Binding name}" FontAttributes="Bold" FontSize="28" TextColor="White" />
                                     <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="pokeball1" Aspect="AspectFill"
                                             HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" Opacity="0.1"/>
                                     <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="{Binding imagem}" Aspect="AspectFill"
                                             HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" />
-                                    <StackLayout Grid.Row="2" Orientation="Horizontal">
+                                    <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="0" IsClippedToBounds="True">
                                         <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
                                             <CollectionView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackLayout>
                                                         <Frame BackgroundColor="{Binding corTipos}" Margin="2,0,2,0" Padding="4" BorderColor="Transparent"
-                                                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" CornerRadius="5">
+                                                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" CornerRadius="5" >
                                                             <StackLayout Orientation="Horizontal">
                                                                 <Image Source="{Binding Imagem}"/>
                                                                 <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="14" 
@@ -51,5 +51,4 @@
             </CollectionView>
         </Grid>
     </Grid>
-
 </ContentPage>
