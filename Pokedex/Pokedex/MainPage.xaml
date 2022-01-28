@@ -26,7 +26,7 @@
                                     <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="{Binding imagem}" Aspect="AspectFill"
                                             HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" />
                                     <StackLayout Grid.Row="2" Orientation="Horizontal" >
-                                        <CollectionView ItemsSource="{Binding types}" x:Name="teste">
+                                        <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
                                             <CollectionView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackLayout>
@@ -35,7 +35,7 @@
                                                             <StackLayout Orientation="Horizontal">
                                                                 <Image Source="iconFire2"/>
                                                                 <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="16" 
-                                                                       TextColor="White"  />
+                                                                       TextColor="White" HorizontalTextAlignment="Center" />
                                                             </StackLayout>
                                                         </Frame>
                                                     </StackLayout>
