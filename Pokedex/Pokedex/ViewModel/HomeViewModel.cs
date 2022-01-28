@@ -10,6 +10,7 @@ namespace Pokedex.ViewModel
     {
         public List<string> listaNomes { get; set; }
         public List<Pokemon> listaItens { get; set; }
+
         public HomeViewModel()
         {
             listaNomes = new List<string>
@@ -25,15 +26,30 @@ namespace Pokedex.ViewModel
         }
         public void atribuirValores(List<Pokemon> lista)
         {
-            lista[0].imagem = "BulbasaurP2";
-            lista[1].imagem = "Ivysaur";
-            lista[2].imagem = "Venusaur";
-            lista[3].imagem = "Charmander";
+            foreach(var Pokemon in lista)
+            {
+                foreach(var tiposPokemon in Pokemon.types)
+                {
+                    foreach(var categoria in ListaTipos.ListaCategorias)
+                    {
+                        if (tiposPokemon.type.name.Equals(categoria.Nome))
+                        {
+                            tiposPokemon.corTipos = categoria.Cor;
+                            tiposPokemon.Imagem = categoria.Imagem;
+                            if(string.IsNullOrEmpty(Pokemon.corFundo))
+                                Pokemon.corFundo = categoria.CorFundo;
+                        }
+                    }
+                    foreach(var pokemon in ListaTipos.ListaPokemons)
+                    {
+                        if (Pokemon.name.Equals(pokemon.name))
+                        {
+                            Pokemon.imagem = pokemon.imagem;
+                        }
+                    }
+                }
+            }
 
-            lista[0].corFundo = "#8BBE8A";
-            lista[1].corFundo = "#8BBE8A";
-            lista[2].corFundo = "#8BBE8A";
-            lista[3].corFundo = "#FFA756";
         }
     }
 }

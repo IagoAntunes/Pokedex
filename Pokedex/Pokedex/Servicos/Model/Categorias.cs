@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Pokedex.Servicos.Model
 {
-    public class ListaTiposPokemons
+    public class Categorias
     {
-        public TiposPokemon type { get; set; }
-        public string corTipos { get; set; }
+        public string Nome { get; set; }
+        public string Cor { get; set; }
         public string Imagem { get; set; }
+        public string CorFundo { get; set; }
     }
 }
