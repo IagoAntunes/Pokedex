@@ -24,6 +24,8 @@
                                     <!--<Image Grid.Row="0" Source="pontinhos10" Grid.RowSpan="2" Opacity="0.1" Aspect="AspectFit" />-->
                                     <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="pokeball1" Aspect="AspectFill"
                                             HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" Opacity="0.1"/>
+                                    <Image Grid.Row="0" Grid.RowSpan="3"  Grid.Column="1"  Source="{Binding imagem}" Aspect="AspectFill"
+                                            HorizontalOptions="EndAndExpand" WidthRequest="130" HeightRequest="80" />
                                     <!--<Image Grid.Row="1" HorizontalOptions="End" Source="{Binding imagem}" Aspect="AspectFill" />-->
                                     <StackLayout Grid.Row="2" Orientation="Horizontal" >
                                         <CollectionView ItemsSource="{Binding types}" x:Name="teste">
