@@ -30,10 +30,13 @@
                                             <CollectionView.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackLayout>
-                                                        <Frame BackgroundColor="Gray" Margin="0" Padding="5" BorderColor="Transparent"
-                                                               HorizontalOptions="Start" VerticalOptions="Center">
-                                                            <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="20" 
-                                                                   TextColor="Black" BackgroundColor="Green" />
+                                                        <Frame BackgroundColor="#EF8263" Margin="0" Padding="5" BorderColor="Transparent"
+                                                               HorizontalOptions="Start" VerticalOptions="Center" CornerRadius="5">
+                                                            <StackLayout Orientation="Horizontal">
+                                                                <Image Source="iconFire2"/>
+                                                                <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="16" 
+                                                                       TextColor="White"  />
+                                                            </StackLayout>
                                                         </Frame>
                                                     </StackLayout>
                                                 </DataTemplate>

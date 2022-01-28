@@ -8,7 +8,6 @@ namespace Pokedex.ViewModel
 {
     public class HomeViewModel
     {
-        public ObservableCollection<Pokemon> ListaP { get; set; }
         public List<string> listaNomes { get; set; }
         public List<Pokemon> listaItens { get; set; }
         public HomeViewModel()
