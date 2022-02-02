@@ -19,6 +19,10 @@ namespace Pokedex
             BindingContext = new ViewModel.HomeViewModel();
            
         }
+        public void GoAbout(object sender,EventArgs args)
+        {
+            App.Current.MainPage = new View.PageAbout();
+        }
    
     }
 }

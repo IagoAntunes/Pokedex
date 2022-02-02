@@ -17,7 +17,10 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,10" BackgroundColor="{Binding corFundo}"> 
+                            <Frame CornerRadius="10" BorderColor="Transparent" Margin="0,0,0,10" BackgroundColor="{Binding corFundo}">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="GoAbout" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
                                 <Grid RowDefinitions="Auto,Auto,60" ColumnDefinitions="Auto,Auto" IsClippedToBounds="True">
                                     <Label Grid.Row="0" Text="{Binding id,StringFormat='#{0}'}" TextColor="Black" FontSize="18"/>
                                     <Label Grid.Row="1"  Text="{Binding name}" FontAttributes="Bold" FontSize="28" TextColor="White" />
