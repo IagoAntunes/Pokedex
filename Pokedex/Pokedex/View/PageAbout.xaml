@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokedex.View.PageAbout">
     <Grid RowDefinitions="300,*" RowSpacing="0">
-        <Grid Grid.Row="0" BackgroundColor="Orange">
-            <Label/>
+        <Grid Grid.Row="0" BackgroundColor="Orange" >
+            <Grid HorizontalOptions="Center" VerticalOptions="Center" RowDefinitions="Auto,Auto,Auto" 
+                  ColumnDefinitions="150,Auto" >
+                <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="Charmander" HeightRequest="150" Aspect="AspectFill" Margin="5"/>
+                <Label Text="#004" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
+                <Label Text="Charmander" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="35" FontAttributes="Bold"/>
+                <Label Text="Fire" Grid.Row="2" Grid.Column="1" TextColor="White" />
+            </Grid>
         </Grid>
         <Grid Grid.Row="1">
             <Frame BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
