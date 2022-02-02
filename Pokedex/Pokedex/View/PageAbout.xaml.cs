@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokedex.Servicos.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,10 @@ namespace Pokedex.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageAbout : ContentPage
     {
-        public PageAbout()
+        public PageAbout(Pokemon pokemon)
         {
             InitializeComponent();
+            lblNome1.Text = pokemon.name;
         }
     }
 }

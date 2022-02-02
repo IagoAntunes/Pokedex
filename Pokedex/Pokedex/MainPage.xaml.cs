@@ -19,10 +19,14 @@ namespace Pokedex
             BindingContext = new ViewModel.HomeViewModel();
            
         }
-        public void GoAbout(object sender,EventArgs args)
+        private void GoAbout(object sender, EventArgs args)
         {
-            App.Current.MainPage = new View.PageAbout();
+            Frame frameDetalhe = (Frame)sender;
+            TapGestureRecognizer tapGest = (TapGestureRecognizer)frameDetalhe.GestureRecognizers[0];
+            Pokemon pokemom = tapGest.CommandParameter as Pokemon;
+            //Navigation.PushAsync(new Paginas.Detalhes(vaga));
+
+            App.Current.MainPage = new View.PageAbout(pokemom);
         }
-   
     }
 }
