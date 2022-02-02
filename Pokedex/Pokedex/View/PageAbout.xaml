@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokedex.View.PageAbout">
-    <Grid RowDefinitions="300,*" RowSpacing="0">
-        <Grid Grid.Row="0" BackgroundColor="Orange" >
+    <Grid RowDefinitions="300,*" RowSpacing="0" BackgroundColor="#FFA756">
+        <Grid Grid.Row="0" BackgroundColor="#FFA756" >
             <Grid HorizontalOptions="Center" VerticalOptions="Center" RowDefinitions="Auto,Auto,Auto" 
                   ColumnDefinitions="150,Auto" >
                 <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="Charmander" HeightRequest="150" Aspect="AspectFill" Margin="5"/>
@@ -12,11 +12,43 @@
                 <Label Text="Fire" Grid.Row="2" Grid.Column="1" TextColor="White" />
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
-            <Frame BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                   Margin="0,-40,0,0">
-                
-            </Frame>
-        </Grid>
+        <ScrollView Grid.Row="1" Margin="0,-40,0,0">
+            <Grid>
+                <Frame BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid RowDefinitions="Auto,Auto,Auto" Padding="15,0,15,15">
+                        <Label HorizontalTextAlignment="Start" FontSize="16" Grid.Row="0" TextColor="Gray" LineHeight="1.2"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida,mauris non mattis pellentesque, felis orci accumsan est, eu efficitur erat nisi quis lorem.Aliquam quis pulvinar risus."/>
+                        <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
+                            <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="Orange" FontAttributes="Bold"/>
+                            <Label Text="Species" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Height" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Weight" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Abilities" FontSize="16" Grid.Row="4" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Weaknesses" FontSize="16" Grid.Row="5" FontAttributes="Bold" TextColor="Black"/>
+
+                            <Label Text="Lizard Pokemon" FontSize="16" Grid.Row="1" Grid.Column="1"  TextColor="Gray"/>
+                            <Label Text="Height" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Weight" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Abilities" FontSize="16" Grid.Row="4" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Weaknesses" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
+                        </Grid>
+                        <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
+                            <Label Text="Training" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="Orange" FontAttributes="Bold"/>
+                            <Label Text="EV YIELD" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Catch Rate" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Base Friendship" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Base Exp" FontSize="16" Grid.Row="4" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Growth Rate" FontSize="16" Grid.Row="5" FontAttributes="Bold" TextColor="Black"/>
+
+                            <Label Text="Lizard Pokemon" FontSize="16" Grid.Row="1" Grid.Column="1"  TextColor="Gray"/>
+                            <Label Text="Height" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Weight" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Abilities" FontSize="16" Grid.Row="4" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="Weaknesses" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
     </Grid>
 </ContentPage>
