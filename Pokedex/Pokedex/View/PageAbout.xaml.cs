@@ -16,7 +16,7 @@ namespace Pokedex.View
         public PageAbout(Pokemon pokemon)
         {
             InitializeComponent();
-            lblNome1.Text = pokemon.name;
+            BindingContext = new ViewModel.AboutViewModel(pokemon);
         }
     }
 }

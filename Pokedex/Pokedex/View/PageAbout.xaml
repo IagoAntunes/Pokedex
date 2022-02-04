@@ -2,14 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokedex.View.PageAbout">
-    <Grid RowDefinitions="300,*" RowSpacing="0" BackgroundColor="#FFA756">
-        <Grid Grid.Row="0" BackgroundColor="#FFA756" >
-            <Grid HorizontalOptions="Center" VerticalOptions="Center" RowDefinitions="Auto,Auto,Auto" 
-                  ColumnDefinitions="150,Auto" >
-                <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="Charmander" HeightRequest="150" Aspect="AspectFill" Margin="5"/>
-                <Label Text="#004" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
-                <Label Text="Charmander" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="35" FontAttributes="Bold"/>
-                <Label x:Name="lblNome1" Text="Fire" Grid.Row="2" Grid.Column="1" TextColor="White" />
+    <Grid RowDefinitions="300,*" RowSpacing="0" BackgroundColor="{Binding corFundo}">
+        <Grid Grid.Row="0" Padding="10" >
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" RowDefinitions="Auto,Auto,Auto" 
+                  ColumnDefinitions="200,Auto"  >
+                <StackLayout Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" >
+                    <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="{Binding imagem}" />
+                </StackLayout>
+                <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                    <Label  Text="{Binding id,StringFormat='#{0}'}" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
+                    <Label Text="{Binding name}" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="35" FontAttributes="Bold"/>
+                    <StackLayout Grid.Row="2" Grid.Column="1"  Orientation="Horizontal"  IsClippedToBounds="True">
+                        <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Frame BackgroundColor="{Binding corTipos}" Padding="4" BorderColor="Transparent"
+                                                                   HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" >
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="{Binding Imagem}"/>
+                                                <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="14" 
+                                                                           TextColor="White" HorizontalTextAlignment="Center" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </StackLayout>
             </Grid>
         </Grid>
         <ScrollView Grid.Row="1" Margin="0,-40,0,0">
@@ -19,7 +40,7 @@
                         <Label HorizontalTextAlignment="Start" FontSize="16" Grid.Row="0" TextColor="Gray" LineHeight="1.2"
                             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida,mauris non mattis pellentesque, felis orci accumsan est, eu efficitur erat nisi quis lorem.Aliquam quis pulvinar risus."/>
                         <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
-                            <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="Orange" FontAttributes="Bold"/>
+                            <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
                             <Label Text="Species" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Height" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Weight" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
@@ -33,7 +54,7 @@
                             <Label Text="Weaknesses" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
                         </Grid>
                         <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
-                            <Label Text="Training" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="Orange" FontAttributes="Bold"/>
+                            <Label Text="Training" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
                             <Label Text="EV YIELD" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Catch Rate" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Base Friendship" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
