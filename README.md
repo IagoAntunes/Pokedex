@@ -1,81 +1,80 @@
-<br />
+
 <p align="center">
     <img src="https://imgur.com/zY7CY3U.png" alt="Logo" width="500">
-
-  <h3 align="center">Pokedex by <a href="https://umpontoseis.com/">umpontoseis</a></h3>
- <br />
-  <p align="center">
-     App para buscar pokémons
-       <br />
-    <br />
-    <a href="https://github.com/Lorenalgm/pokedex">Desafio</a>
-    ·
-    <a href="https://www.devchallenge.com.br/">DevChallenge</a>
-  </p>
 </p>
 
-## Índice
+<h4 align="center"> 
+	🚧 Aplicativo PokeDex 🚧
+</h4>
 
-* [Devchallenge](#devchallenge) 
-* [Desafio](#desafio)
-* [Techs](#techs)
-* [Como começar](#como-começar)
-* [Dicas](#dicas)  
-  * [Dados](#dados)
-  * [Modelo](#modelo)
-  * [Imagens](#imagens)
-  * [Icones](#icones)
-  * [Tipo de fonte](#tipo-de-fonte)
-* [Compartilhe](#compartilhe)
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-layout">Layout</a> • 
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-contribuidores">Contribuidores</a> • 
+ <a href="#-autor">Autor</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
 
-# Devchallenge
-<a href="https://devchallenge.now.sh/"> DevChallenge</a> permite que você evolua suas skills como programador! Participe da nossa <a href="https://discord.gg/yvYXhGj">comunidade</a> o/
 
-# Desafio
-Seu desafio é criar um app para buscar pokémons, filtrando por tipos, além de visualizar mais informações dos personagens.
+## 💻 Sobre o projeto
 
-## Requisitos:
-- Criar uma tela inicial listando todos os pokemons<br>
-- Adicionar filtros, podendo ser por: tipos, fraquezas, alturas, pesos e quantitativo de números<br>
-- Ao clicar em um personagem, o usuário será redirecionado para o perfil do mesmo, onde conterá mais informações como dados de treinamento, inicadores, tipos de defesa e evoluções.
+♻️ Pokedex - É um projeto com objetivo de me desafiar e testar minhas habilidades em desenvolvimento mobile. Template e design foram retirados do [DevChallenge](https://devchallenge.vercel.app/).
 
-## Requisitos extras:
-- Adicionar opção para ordenar por ordem alfabética ou numeração
-- Adicionar filtro por gerações de pokemons
 
-# Techs: 
-- React Native, Vue Native, Flutter ou a linguagem que você preferir :)
+[DevChallenge](https://devchallenge.vercel.app/) é uma comunidade que disponibiliza desafios em sua plataforma web.
 
-# Como começar:
-1 - Use esse template (clicando em Use this template) ou faça um fork deste repositório com o código inicial<br>
-2 - Leia as instruções no readme.md<br>
-3 - Comece a codar! Sinta-se livre para utilizar o fluxo de trabalho que ache mais confortável<br>
-4 - Compartilhe seu resultado com a comunidade! #devchallenge
+---
 
-# Dicas
+## ⚙️ Funcionalidades
 
-## Dados:
-Para listar os dados, você pode utilizar os dados na API da PokéApi, dá uma olhadinha na documentação: https://pokeapi.co/
+- [x] Empresas ou entidades podem se cadastrar na plataforma web enviando:
+  - [x] uma imagem do ponto de coleta
+  - [x] nome da entidade, email e whatsapp
+  - [x] e o endereço para que ele possa aparecer no mapa
+  - [x] além de selecionar um ou mais ítens de coleta: 
+    - lâmpadas
+    - pilhas e baterias
+    - papéis e papelão
+    - resíduos eletrônicos
+    - resíduos orgânicos
+    - óleo de cozinha
 
-## Modelo:
-O modelo final do app está disponível na pasta `./design` e também no Figma da umpontoseis: 
-https://www.figma.com/file/THLxZSlOoUYMZrjFg0Kl1M/Pok%C3%A9dex?node-id=218%3A4647
+- [x] Os usuários tem acesso ao aplicativo móvel, onde podem:
+  - [x] navegar pelo mapa para ver as instituições cadastradas
+  - [x] entrar em contato com a entidade através do E-mail ou do WhatsApp
 
-## Icones
-Os ícones estão disponíveis na pasta `./assets/icons`
+---
 
-## Tipo de fonte:
-- SF pro display. Disponível na pasta `./assets/fonts`
+## 🎨 Layout
 
-# Compartilhe!
-Inicie seu projeto utilizando esse template no seu github como um repositório público<br>
-Faça um print, gif ou vídeo e compartilhe o resultado com a #devchallenge ou marcando nosso perfil @devchallenge!<br>
+O layout da aplicação está disponível no Figma:
 
-Desafio criado por  <a href="https://umpontoseis.com/">umpontoseis</a> :)
+<a href="https://www.figma.com/file/THLxZSlOoUYMZrjFg0Kl1M/Pok%C3%A9dex?node-id=218%3A4647">
+  <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+</a>
 
-# Comunidade DevChallenge
-Site: https://www.devchallenge.com.br/ <br>
-Discord: https://discord.gg/yvYXhGj <br>
-Linkedin: https://www.linkedin.com/company/devchallenge/<br>
-Twitter: https://twitter.com/dev_challenge<br>
-Instagram: https://www.instagram.com/devchallenge/<br>
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+-   **[Xamarin-Forms](https://dotnet.microsoft.com/en-us/apps/xamarin)**
+-   **[API-REST](https://react-icons.github.io/react-icons/)**
+-   **[VisualStudio](https://visualstudio.microsoft.com/pt-br/downloads/)**
+-   **[Git](https://git-scm.com/)**
+-   **[PokeApi](https://pokeapi.co/)**
+
+---
+## 🦸 Autor
+
+[![Linkedin Badge](https://img.shields.io/badge/-IagoFerreira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/iagoaferreira/)](https://www.linkedin.com/in/iagoaferreira/) [![Gmail Badge](https://img.shields.io/badge/-iagoantunes.f@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:iagoantunes.f@gmail.com)](mailto:iagoantunes.f@gmail.com)
+
+---
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Iago Ferreira 👋🏽 [Entre em contato!](https://www.linkedin.com/in/iagoaferreira/)
