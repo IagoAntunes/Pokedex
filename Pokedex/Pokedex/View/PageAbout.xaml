@@ -33,8 +33,8 @@
                 </StackLayout>
             </Grid>
         </Grid>
-        <ScrollView Grid.Row="1" Margin="0,-40,0,0">
-            <Grid RowDefinitions="Auto,Auto">
+        <StackLayout Grid.Row="1" Margin="0,-40,0,0">
+            <Grid RowDefinitions="Auto,600">
                 <Grid ColumnDefinitions="80,80,85" HorizontalOptions="Center" ColumnSpacing="20">
                     <Label Text="About" Grid.Column="0" FontSize="18" TextColor="White">
                         <Label.GestureRecognizers>
@@ -58,7 +58,7 @@
                         <Label HorizontalTextAlignment="Start" FontSize="16" Grid.Row="0" TextColor="Gray" LineHeight="1.2"
                             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida,mauris non mattis pellentesque, felis orci accumsan est, eu efficitur erat nisi quis lorem.Aliquam quis pulvinar risus."/>
                         <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
-                            <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
+                            <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,10,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
                             <Label Text="Species" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Height" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Weight" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
@@ -88,14 +88,68 @@
                     </Grid>
                 </Frame>
                 <!--Frame2-->
-                <Frame Grid.Row="1" BackgroundColor="Orange" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="fStats">
-                   
+                <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                       IsVisible="False" x:Name="fStats">
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto" Padding="15,0,15,15">
+                        <Label Text="Base Stats" Grid.Row="0" FontSize="22" FontAttributes="Bold" TextColor="{Binding corFundo}" Margin="10,0,0,20"/>
+                        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" Grid.Row="1" >
+                            <Label Text="Hp" Grid.Row="0" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Attack" Grid.Row="1" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Defense" Grid.Row="2" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Sp.Attack" Grid.Row="3" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Sp.Def" Grid.Row="4" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Speed" Grid.Row="5" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+                            <Label Text="Total" Grid.Row="6" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
+
+                            <Label Text="10" FontSize="18" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="300" FontSize="18" Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="0" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="1" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="2" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="3" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="4" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+                            <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="5" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                     HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
+     
+
+                            <Label Text="10" FontSize="18" Grid.Row="0" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="1" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="2" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="3" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="4" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="5" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="Min" FontSize="18" Grid.Row="6" Grid.Column="3" FontAttributes="Bold" Margin="30,0,0,0"/>
+
+                            <Label Text="10" FontSize="18" Grid.Row="0" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="1" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="2" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="3" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="4" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="10" FontSize="18" Grid.Row="5" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                            <Label Text="Max" FontSize="18" Grid.Row="6" Grid.Column="4" FontAttributes="Bold" Margin="30,0,0,0"/>
+                        </Grid>
+                        <Grid Grid.Row="2" Margin="0,20,0,0" Padding="10">
+                            <Label HorizontalTextAlignment="Start" FontSize="14" TextColor="Gray" LineHeight="1.2"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida,mauris non mattis pellentesque, felis orci accumsan est, eu efficitur erat nisi quis lorem.Aliquam quis pulvinar risus."/>
+                        </Grid>
+                    </Grid>
                 </Frame>
                 <!--Frame3-->
                 <Frame Grid.Row="1" BackgroundColor="Green" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="fEvolution">
                     
                 </Frame>
             </Grid>
-        </ScrollView>
+        </StackLayout>
     </Grid>
 </ContentPage>
