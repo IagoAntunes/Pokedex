@@ -18,5 +18,23 @@ namespace Pokedex.View
             InitializeComponent();
             BindingContext = new ViewModel.AboutViewModel(pokemon);
         }
+        private void ToAbout(object sender,EventArgs args)
+        {
+            fAbout.IsVisible = true;
+            fStats.IsVisible = false;
+            fEvolution.IsVisible = false;
+        }
+        private void ToStats(object sender, EventArgs args)
+        {
+            fAbout.IsVisible = false;
+            fStats.IsVisible = true;
+            fEvolution.IsVisible = false;
+        }
+        private void ToEvolution(object sender, EventArgs args)
+        {
+            fAbout.IsVisible = false;
+            fStats.IsVisible = false;
+            fEvolution.IsVisible = true;
+        }
     }
 }

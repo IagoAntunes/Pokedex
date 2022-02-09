@@ -34,8 +34,26 @@
             </Grid>
         </Grid>
         <ScrollView Grid.Row="1" Margin="0,-40,0,0">
-            <Grid>
-                <Frame BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid RowDefinitions="Auto,Auto">
+                <Grid ColumnDefinitions="80,80,85" HorizontalOptions="Center" ColumnSpacing="20">
+                    <Label Text="About" Grid.Column="0" FontSize="18" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ToAbout"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Stats" Grid.Column="1" FontSize="18" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ToStats"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Evolution" Grid.Column="2" FontSize="18" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ToEvolution"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <!--Frame1-->
+                <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="True" x:Name="fAbout">
                     <Grid RowDefinitions="Auto,Auto,Auto" Padding="15,0,15,15">
                         <Label HorizontalTextAlignment="Start" FontSize="16" Grid.Row="0" TextColor="Gray" LineHeight="1.2"
                             Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida,mauris non mattis pellentesque, felis orci accumsan est, eu efficitur erat nisi quis lorem.Aliquam quis pulvinar risus."/>
@@ -68,6 +86,14 @@
                             <Label Text="Weaknesses" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
                         </Grid>
                     </Grid>
+                </Frame>
+                <!--Frame2-->
+                <Frame Grid.Row="1" BackgroundColor="Orange" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="fStats">
+                   
+                </Frame>
+                <!--Frame3-->
+                <Frame Grid.Row="1" BackgroundColor="Green" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False" x:Name="fEvolution">
+                    
                 </Frame>
             </Grid>
         </ScrollView>
