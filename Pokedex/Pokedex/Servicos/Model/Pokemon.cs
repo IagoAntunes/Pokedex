@@ -11,6 +11,11 @@ namespace Pokedex.Servicos.Model
         public string name { get { return _name; } set { _name = char.ToUpper(value[0]).ToString() + value.Substring(1); } }
         public string url { get; set; }
         public ListaTiposPokemons[] types { get; set; }
+        public int Height { get; set; }
+        public int Weight { get; set; }
+        public ListaHabilidades[] abilities { get; set; }
+
+
         public string imagem { get; set; }
         public string corFundo { get; set; }
       

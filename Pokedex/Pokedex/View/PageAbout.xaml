@@ -66,9 +66,9 @@
                             <Label Text="Weaknesses" FontSize="16" Grid.Row="5" FontAttributes="Bold" TextColor="Black"/>
 
                             <Label Text="Lizard Pokemon" FontSize="16" Grid.Row="1" Grid.Column="1"  TextColor="Gray"/>
-                            <Label Text="Height" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
-                            <Label Text="Weight" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray"/>
-                            <Label Text="Abilities" FontSize="16" Grid.Row="4" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding height}" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding weight}" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding nameAbility}" FontSize="16" Grid.Row="4" Grid.Column="1" TextColor="Gray"/>
                             <Label Text="Weaknesses" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
                         </Grid>
                         <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
