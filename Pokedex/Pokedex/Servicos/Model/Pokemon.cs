@@ -14,10 +14,9 @@ namespace Pokedex.Servicos.Model
         public int Height { get; set; }
         public int Weight { get; set; }
         public ListaHabilidades[] abilities { get; set; }
-
+        public ListaStatus[] stats { get; set; }
 
         public string imagem { get; set; }
         public string corFundo { get; set; }
-      
     }
 }

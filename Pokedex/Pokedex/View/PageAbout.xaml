@@ -36,17 +36,17 @@
         <StackLayout Grid.Row="1" Margin="0,-40,0,0">
             <Grid RowDefinitions="Auto,600">
                 <Grid ColumnDefinitions="80,80,85" HorizontalOptions="Center" ColumnSpacing="20">
-                    <Label Text="About" Grid.Column="0" FontSize="18" TextColor="White">
+                    <Label Text="About" Grid.Column="0" FontSize="18" TextColor="White" x:Name="lblAbout">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ToAbout"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label Text="Stats" Grid.Column="1" FontSize="18" TextColor="White">
+                    <Label Text="Stats" Grid.Column="1" FontSize="18" TextColor="White" x:Name="lblStats">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ToStats"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label Text="Evolution" Grid.Column="2" FontSize="18" TextColor="White">
+                    <Label Text="Evolution" Grid.Column="2" FontSize="18" TextColor="White" x:Name="lblEvolution">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="ToEvolution"/>
                         </Label.GestureRecognizers>
@@ -101,12 +101,12 @@
                             <Label Text="Speed" Grid.Row="5" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
                             <Label Text="Total" Grid.Row="6" FontAttributes="Bold" TextColor="Black" FontSize="14"/>
 
-                            <Label Text="10" FontSize="18" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                            <Label Text="10" FontSize="18" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                            <Label Text="10" FontSize="18" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                            <Label Text="10" FontSize="18" Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                            <Label Text="10" FontSize="18" Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                            <Label Text="10" FontSize="18" Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding hp}" FontSize="18" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding attack}" FontSize="18" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding defense}" FontSize="18" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding spattack}" FontSize="18" Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding spdef}" FontSize="18" Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                            <Label Text="{Binding defense}" FontSize="18" Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
                             <Label Text="300" FontSize="18" Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
 
                             <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="0" Grid.Column="2" HeightRequest="5" WidthRequest="50"
