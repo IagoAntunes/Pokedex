@@ -30,9 +30,9 @@ namespace Pokedex.View
         }
         private void ToStats(object sender, EventArgs args)
         {
-            lblAbout.IsVisible = false;
-            lblStats.IsVisible = true;
-            lblEvolution.IsVisible = false;
+            fAbout.IsVisible = false;
+            fStats.IsVisible = true;
+            fEvolution.IsVisible = false;
 
             lblStats.Opacity = 1;
             lblEvolution.Opacity = 0.7;
@@ -44,9 +44,9 @@ namespace Pokedex.View
             fStats.IsVisible = false;
             fEvolution.IsVisible = true;
 
-            fStats.Opacity = 0.7;
-            fEvolution.Opacity = 1;
-            fAbout.Opacity = 0.7;
+            lblStats.Opacity = 0.7;
+            lblEvolution.Opacity = 1;
+            lblAbout.Opacity = 0.7;
         }
     }
 }
