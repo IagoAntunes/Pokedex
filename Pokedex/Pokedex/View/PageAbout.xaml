@@ -108,19 +108,19 @@
                                 <Label Text="{Binding spattack}" FontSize="18" Grid.Row="3" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
                                 <Label Text="{Binding spdef}" FontSize="18" Grid.Row="4" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
                                 <Label Text="{Binding defense}" FontSize="18" Grid.Row="5" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
-                                <Label Text="300" FontSize="18" Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
+                                <Label Text="{Binding total}" FontSize="18" Grid.Row="6" Grid.Column="1" FontAttributes="Bold" Margin="20,0,0,0"/>
 
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="0" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="0" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding hpTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="1" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="1" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding attackTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="2" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="2" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding defenseTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="3" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="3" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding spattackTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="4" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="4" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding spdefTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
-                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="5" Grid.Column="2" HeightRequest="5" WidthRequest="50"
+                                <BoxView BackgroundColor="{Binding corFundo}" Grid.Row="5" Grid.Column="2" HeightRequest="5" WidthRequest="{Binding defenseTam}"
                                          HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" CornerRadius="3"/>
      
 

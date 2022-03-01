@@ -34,7 +34,7 @@
                                                 <DataTemplate>
                                                     <StackLayout>
                                                         <Frame BackgroundColor="{Binding corTipos}" Margin="2,0,2,0" Padding="4" BorderColor="Transparent"
-                                                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" CornerRadius="5" >
+                                                               HorizontalOptions="Start" VerticalOptions="CenterAndExpand" CornerRadius="5" >
                                                             <StackLayout Orientation="Horizontal">
                                                                 <Image Source="{Binding Imagem}"/>
                                                                 <Label Text="{Binding type.name}" FontAttributes="Bold" FontSize="14" 

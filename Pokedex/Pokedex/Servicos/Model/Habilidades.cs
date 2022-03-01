@@ -11,7 +11,5 @@ namespace Pokedex.Servicos.Model
 
         public string url { get;set; }
 
-
-
     }
 }

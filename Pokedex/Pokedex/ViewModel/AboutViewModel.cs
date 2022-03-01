@@ -17,11 +17,19 @@ namespace Pokedex.ViewModel
         #region Stats
         public int base_stat { get; set; }
         public int hp { get; set; }
+        public int hpTam;
         public int attack { get; set; }
+        public int attackTam { get; set; }
         public int defense { get; set; }
+        public int defenseTam { get; set; }
         public int spattack { get; set; }
+        public int spattackTam { get; set; }
         public int spdef { get; set; }
+        public int spdefTam { get; set; }
         public int speed { get; set; }
+        public int speedTam { get; set; }
+
+        public int total { get; set; }
 
         #endregion
 
@@ -53,7 +61,14 @@ namespace Pokedex.ViewModel
             spdef = pokemon.stats[4].base_stat;
             defense = pokemon.stats[5].base_stat;
 
+            hpTam = (int)(hp * 0.6);
+            attackTam = (int)(attack*0.6);
+            defenseTam = (int)(defense*0.6);
+            spattackTam = (int)(spattack*0.6);
+            spdefTam = (int)(spdef*0.6);
+            defenseTam = (int)(defense*0.6);
 
+            total = (hp + attack + defense + spattack + spdef + defense);
 
         }
     }
