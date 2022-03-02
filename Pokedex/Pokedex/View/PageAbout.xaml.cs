@@ -16,7 +16,13 @@ namespace Pokedex.View
         public PageAbout(Pokemon pokemon)
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new ViewModel.AboutViewModel(pokemon);
+        }
+        private void ToVoltar(object sender,EventArgs args)
+        {
+            Navigation.PopAsync();
+            App.Current.MainPage = new MainPage();
         }
         private void ToAbout(object sender,EventArgs args)
         {

@@ -10,7 +10,8 @@ namespace Pokedex
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new MainPage();
         }
 
         protected override void OnStart()

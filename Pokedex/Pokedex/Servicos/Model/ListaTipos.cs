@@ -8,13 +8,13 @@ namespace Pokedex.Servicos.Model
     {
         public static List<Categorias> ListaCategorias = new List<Categorias>()
         {
-            new Categorias{Nome="Fire",Cor="#FFA152",Imagem="iconFireSVG",CorFundo="#FFA756"},
-            new Categorias{Nome="Grass",Cor="#35C04A",Imagem="IconGrassSVG",CorFundo="#8BBE8A"},
-            new Categorias{Nome="Poison",Cor="#B97FC9",Imagem="IconPoisonSVG",CorFundo="#A566C7"}
+            new Categorias{Nome="Fire",Cor="#FD7D24",Imagem="iconFireNew",CorFundo="#FFA756"},
+            new Categorias{Nome="Grass",Cor="#62B957",Imagem="iconGrassNew2",CorFundo="#8BBE8A"},
+            new Categorias{Nome="Poison",Cor="#A552CC",Imagem="IconPoisonNew2",CorFundo="#A566C7"}
         };
         public static List<Pokemon> ListaPokemons = new List<Pokemon>()
        {
-           new Pokemon{name = "Bulbasaur",imagem="BulbasaurP2"},
+           new Pokemon{name = "Bulbasaur",imagem="BulbasaurNew"},
            new Pokemon{name = "Ivysaur",imagem="Ivysaur"},
            new Pokemon{name = "Venusaur",imagem="Venusaur"},
            new Pokemon{name = "Charmander",imagem="Charmander"}

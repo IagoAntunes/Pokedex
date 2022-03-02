@@ -16,6 +16,7 @@ namespace Pokedex
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new ViewModel.HomeViewModel();
            
         }
@@ -23,10 +24,11 @@ namespace Pokedex
         {
             Frame frameDetalhe = (Frame)sender;
             TapGestureRecognizer tapGest = (TapGestureRecognizer)frameDetalhe.GestureRecognizers[0];
-            Pokemon pokemom = tapGest.CommandParameter as Pokemon;
+            Pokemon pokemon = tapGest.CommandParameter as Pokemon;
             //Navigation.PushAsync(new Paginas.Detalhes(vaga));
 
-            App.Current.MainPage = new View.PageAbout(pokemom);
+            Navigation.PushAsync(new View.PageAbout(pokemon));
+            //App.Current.MainPage = new View.PageAbout(pokemon);
         }
     }
 }
