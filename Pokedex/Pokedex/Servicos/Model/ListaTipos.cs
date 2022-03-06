@@ -14,10 +14,10 @@ namespace Pokedex.Servicos.Model
         };
         public static List<Pokemon> ListaPokemons = new List<Pokemon>()
        {
-           new Pokemon{name = "Bulbasaur",imagem="BulbasaurNew"},
-           new Pokemon{name = "Ivysaur",imagem="Ivysaur"},
-           new Pokemon{name = "Venusaur",imagem="Venusaur"},
-           new Pokemon{name = "Charmander",imagem="Charmander"}
+           new Pokemon{name = "Bulbasaur"},
+           new Pokemon{name = "Ivysaur"},
+           new Pokemon{name = "Venusaur"},
+           new Pokemon{name = "Charmander"}
        };
     }
 }

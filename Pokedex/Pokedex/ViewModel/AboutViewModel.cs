@@ -42,7 +42,7 @@ namespace Pokedex.ViewModel
         {
             name = pokemon.name;
             id = pokemon.id;
-            imagem = pokemon.imagem;
+            imagem = pokemon.sprites.other.officialartwork.front_default;
             corFundo = pokemon.corFundo;
             types = pokemon.types;
             height = pokemon.Height;

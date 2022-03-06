@@ -22,7 +22,7 @@ namespace Pokedex.View
         private void ToVoltar(object sender,EventArgs args)
         {
             Navigation.PopAsync();
-            App.Current.MainPage = new MainPage();
+            //App.Current.MainPage = new MainPage();
         }
         private void ToAbout(object sender,EventArgs args)
         {

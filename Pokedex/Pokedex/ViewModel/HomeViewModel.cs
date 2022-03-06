@@ -40,13 +40,13 @@ namespace Pokedex.ViewModel
                                 Pokemon.corFundo = categoria.CorFundo;
                         }
                     }
-                    foreach(var pokemon in ListaTipos.ListaPokemons)
-                    {
-                        if (Pokemon.name.Equals(pokemon.name))
-                        {
-                            Pokemon.imagem = pokemon.imagem;
-                        }
-                    }
+                    //foreach(var pokemon in ListaTipos.ListaPokemons)
+                    //{
+                    //    if (Pokemon.name.Equals(pokemon.name))
+                    //    {
+                    //        Pokemon.imagem = pokemon.imagem;
+                    //    }
+                    //}
                 }
             }
 
