@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Pokedex.Servicos.Model
 {
-    public class ListaPokemons
+    public class Results
     {
-        public int count { get; set; }
-        public Results[] results { get; set; }
+        public string name { get; set; }
+        public string url { get; set; }
+
     }
 }

@@ -19,7 +19,8 @@
                    BorderColor="Transparent" Margin="20,30,20,0">
                 <SearchBar Placeholder="Qual pokemon você esta procurando?"/>
             </Frame>
-
+            
+            <!--Lista de Pokemons -->
             <CollectionView Grid.Row="3" ItemsSource="{Binding listaItens}"  x:Name="Iteste" Margin="0,40,0,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -36,6 +37,7 @@
                                            HeightRequest="200" WidthRequest="150" Opacity="0.8"
                                            Margin="0,-35,0,0"/>
                                     <Image Source="pontosFundo" Opacity="1"/>
+                                    <!-- Tipos de cada pokemon -->
                                     <StackLayout Grid.Row="2" Orientation="Horizontal" Grid.Column="0" IsClippedToBounds="True" Margin="15,-40,0,0">
                                         <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
                                             <CollectionView.ItemTemplate>

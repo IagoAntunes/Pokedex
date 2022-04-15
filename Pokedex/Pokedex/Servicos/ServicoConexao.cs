@@ -25,18 +25,25 @@ namespace Pokedex.Servicos
             
         //    return end;
         //}
-        public static List<Pokemon> ReceberPokemon(List<string> ListaPo)
+        public static ListaPokemons ReceberPokemon()
+        {
+            string url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
+            WebClient wc = new WebClient();
+            string conteudo = wc.DownloadString(url);//Recebe dados do site
+
+            ListaPokemons resultados = JsonConvert.DeserializeObject<ListaPokemons>(conteudo);//Converter JSON para objeto
+
+            return resultados;
+        }
+        public static List<Pokemon> ExtraiPokemons(ListaPokemons lista)
         {
             List<Pokemon> Pokemons = new List<Pokemon>();
-            string url = "https://pokeapi.co/api/v2/pokemon/";
             WebClient wc = new WebClient();
-            foreach (var item in ListaPo)
+            foreach (var result in lista.results)
             {
-                url = url + item;
-                string conteudo = wc.DownloadString(url);//Recebe dados do site
+                string conteudo = wc.DownloadString(result.url);//Recebe dados do site
                 Pokemon end = JsonConvert.DeserializeObject<Pokemon>(conteudo);//Converter JSON para objeto
                 Pokemons.Add(end);
-                url = "https://pokeapi.co/api/v2/pokemon/";
             }
             return Pokemons;
         }

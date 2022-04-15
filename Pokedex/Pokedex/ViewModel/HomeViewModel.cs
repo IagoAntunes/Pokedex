@@ -8,20 +8,15 @@ namespace Pokedex.ViewModel
 {
     public class HomeViewModel
     {
-        public List<string> listaNomes { get; set; }
         public List<Pokemon> listaItens { get; set; }
-
         public HomeViewModel()
         {
-            listaNomes = new List<string>
-            {
-                "bulbasaur","ivysaur","venusaur","charmander"
-            };
 
             //Pokemon listaPok = Servicos.ServicoConexao.ReceberPokemon();
             //var a = listaPok.results;
 
-            listaItens = Servicos.ServicoConexao.ReceberPokemon(listaNomes);
+            ListaPokemons lista = Servicos.ServicoConexao.ReceberPokemon();
+            listaItens = Servicos.ServicoConexao.ExtraiPokemons(lista);
             atribuirValores(listaItens);
         }
         public void atribuirValores(List<Pokemon> lista)
