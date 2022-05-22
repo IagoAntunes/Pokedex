@@ -10,13 +10,15 @@ namespace Pokedex.Servicos.Model
         private string _name;
         public string name { get { return _name; } set { _name = char.ToUpper(value[0]).ToString() + value.Substring(1); } }
         public string url { get; set; }
+        public string base_experience { get; set; }
+        public string corFundo { get; set; }
+
+        public double Height { get; set; }
+        public double Weight { get; set; }
         public ListaTiposPokemons[] types { get; set; }
-        public int Height { get; set; }
-        public int Weight { get; set; }
         public ListaHabilidades[] abilities { get; set; }
         public ListaStatus[] stats { get; set; }
-
         public Sprites sprites { get; set; }
-        public string corFundo { get; set; }
+        public Species species { get; set; }
     }
 }

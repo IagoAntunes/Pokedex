@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Pokedex.Servicos.Model
 {
-    public class Habilidades
+    public class PokemonSpeciesText
     {
-        public string name { get; set; }
-
-        public string url { get;set; }
-
+        public string flavor_text { get; set; }
     }
 }

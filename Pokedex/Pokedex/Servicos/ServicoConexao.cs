@@ -9,23 +9,7 @@ namespace Pokedex.Servicos
 {
     public class ServicoConexao
     {
-        //private static string EnderecoURL = "https://pokeapi.co/api/v2/pokemon?offset=300&limit=10";
-
-        //public static ListaPokemons ReceberListaPokemons()
-        //{
-
-        //    WebClient wc = new WebClient();
-        //    string conteudo = wc.DownloadString(EnderecoURL);//Recebe dados do site
-
-        //    ListaPokemons end = JsonConvert.DeserializeObject<ListaPokemons>(conteudo);//Converter JSON para objeto
-        //    for(int i=0;i<9;i++)
-        //    {
-        //        end.results[i] = BuscarInfoPokemon(end.results[i].url);
-        //    }
-            
-        //    return end;
-        //}
-        public static ListaPokemons ReceberPokemon()
+        public static List<Pokemon> ReceberPokemon()
         {
             string url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
             WebClient wc = new WebClient();
@@ -33,7 +17,7 @@ namespace Pokedex.Servicos
 
             ListaPokemons resultados = JsonConvert.DeserializeObject<ListaPokemons>(conteudo);//Converter JSON para objeto
 
-            return resultados;
+            return ExtraiPokemons(resultados);
         }
         public static List<Pokemon> ExtraiPokemons(ListaPokemons lista)
         {
@@ -42,20 +26,22 @@ namespace Pokedex.Servicos
             foreach (var result in lista.results)
             {
                 string conteudo = wc.DownloadString(result.url);//Recebe dados do site
-                Pokemon end = JsonConvert.DeserializeObject<Pokemon>(conteudo);//Converter JSON para objeto
+                var end = JsonConvert.DeserializeObject<Pokemon>(conteudo);//Converter JSON para objeto
                 Pokemons.Add(end);
             }
             return Pokemons;
         }
-        //public static Pokemon BuscarInfoPokemon(string url)
-        //{
-        //    string endereco = url;
-        //    WebClient wc = new WebClient();
-        //    string conteudo = wc.DownloadString(endereco);//Recebe dados do site
+    
+        public static PokemonSpecies RecebeEspecies(string url)
+        {
+            WebClient wc = new WebClient();
+            string conteudo = wc.DownloadString(url);//Recebe dados do site
 
-        //    Pokemon end = JsonConvert.DeserializeObject<Pokemon>(conteudo);//Converter JSON para objeto
-        //    return end;
-        //}
+            PokemonSpecies resultados = JsonConvert.DeserializeObject<PokemonSpecies>(conteudo);//Converter JSON para objeto
+
+            return resultados;
+        }
+    
     }
 }
 

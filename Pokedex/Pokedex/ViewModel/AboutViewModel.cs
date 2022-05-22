@@ -9,13 +9,14 @@ namespace Pokedex.ViewModel
     {
         public int id { get; set; }
         public string name { get; set; }
-        public int height { get; set; }
-        public int weight { get; set; }
+        public string texto { get; set; }
+        public string genera { get; set; }
+        public double height { get; set; }
+        public double weight { get; set; }
         public string nameAbility { get; set; }
         public ListaTiposPokemons[] types { get; set; }
 
         #region Stats
-        public int base_stat { get; set; }
         public int hp { get; set; }
         public int hpTam;
         public int attack { get; set; }
@@ -26,9 +27,7 @@ namespace Pokedex.ViewModel
         public int spattackTam { get; set; }
         public int spdef { get; set; }
         public int spdefTam { get; set; }
-        public int speed { get; set; }
-        public int speedTam { get; set; }
-
+        public string base_experience { get; set; }
         public int total { get; set; }
 
         #endregion
@@ -42,16 +41,18 @@ namespace Pokedex.ViewModel
         {
             name = pokemon.name;
             id = pokemon.id;
+            texto = pokemon.species.texto;
             imagem = pokemon.sprites.other.officialartwork.front_default;
             corFundo = pokemon.corFundo;
             types = pokemon.types;
-            height = pokemon.Height;
-            weight = pokemon.Weight;
+            genera = pokemon.species.genera;
+            height = pokemon.Height/10;
+            weight = pokemon.Weight/10;
+            base_experience = pokemon.base_experience;
 
             foreach(var item in pokemon.abilities)
-            {
                 mensagem = mensagem + (char.ToUpper(item.ability.name[0]).ToString() + item.ability.name.Substring(1)) + " - ";
-            }
+
             nameAbility = mensagem;
 
             hp = pokemon.stats[0].base_stat;

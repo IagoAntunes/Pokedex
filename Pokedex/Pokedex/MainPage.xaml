@@ -46,7 +46,7 @@
                                                         <Frame BackgroundColor="{Binding corTipos}" Margin="2,0,2,0" Padding="4" BorderColor="Transparent"
                                                                HorizontalOptions="Start" VerticalOptions="CenterAndExpand" CornerRadius="5" >
                                                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                                                                <Image Source="{Binding Imagem}"/>
+                                                                <Image Source="{Binding Imagem}" HorizontalOptions="Center" MinimumHeightRequest="15" WidthRequest="15"/>
                                                                 <Label Text="{Binding type.name}" FontSize="14" 
                                                                        TextColor="White" HorizontalTextAlignment="Center" />
                                                             </StackLayout>

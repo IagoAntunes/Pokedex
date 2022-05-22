@@ -11,40 +11,27 @@ namespace Pokedex.ViewModel
         public List<Pokemon> listaItens { get; set; }
         public HomeViewModel()
         {
-
-            //Pokemon listaPok = Servicos.ServicoConexao.ReceberPokemon();
-            //var a = listaPok.results;
-
-            ListaPokemons lista = Servicos.ServicoConexao.ReceberPokemon();
-            listaItens = Servicos.ServicoConexao.ExtraiPokemons(lista);
+            listaItens = Servicos.ServicoConexao.ReceberPokemon();
             atribuirValores(listaItens);
         }
         public void atribuirValores(List<Pokemon> lista)
         {
             foreach(var Pokemon in lista)
             {
-                foreach(var tiposPokemon in Pokemon.types)
+                foreach(var tipoPokemon in Pokemon.types)
                 {
                     foreach(var categoria in ListaTipos.ListaCategorias)
                     {
-                        if (tiposPokemon.type.name.Equals(categoria.Nome))
+                        if (tipoPokemon.type.name.Equals(categoria.Nome))
                         {
-                            tiposPokemon.corTipos = categoria.Cor;
-                            tiposPokemon.Imagem = categoria.Imagem;
+                            tipoPokemon.corTipos = categoria.Cor;
+                            tipoPokemon.Imagem = categoria.Imagem;
                             if(string.IsNullOrEmpty(Pokemon.corFundo))
                                 Pokemon.corFundo = categoria.CorFundo;
                         }
-                    }
-                    //foreach(var pokemon in ListaTipos.ListaPokemons)
-                    //{
-                    //    if (Pokemon.name.Equals(pokemon.name))
-                    //    {
-                    //        Pokemon.imagem = pokemon.imagem;
-                    //    }
-                    //}
+                    }             
                 }
             }
-
         }
     }
 }

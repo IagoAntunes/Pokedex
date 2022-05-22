@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Pokedex.Servicos.Model
 {
-    internal class Especies
+    public class Genera
     {
+        public string genus { get; set; }
     }
 }

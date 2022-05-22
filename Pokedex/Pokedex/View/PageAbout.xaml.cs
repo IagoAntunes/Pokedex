@@ -28,30 +28,24 @@ namespace Pokedex.View
         {
             fAbout.IsVisible = true;
             fStats.IsVisible = false;
-            fEvolution.IsVisible = false;
 
             lblStats.Opacity =0.7;
-            lblEvolution.Opacity = 0.7;
             lblAbout.Opacity = 1;
         }
         private void ToStats(object sender, EventArgs args)
         {
             fAbout.IsVisible = false;
             fStats.IsVisible = true;
-            fEvolution.IsVisible = false;
 
             lblStats.Opacity = 1;
-            lblEvolution.Opacity = 0.7;
             lblAbout.Opacity = 0.7;
         }
         private void ToEvolution(object sender, EventArgs args)
         {
             fAbout.IsVisible = false;
             fStats.IsVisible = false;
-            fEvolution.IsVisible = true;
 
             lblStats.Opacity = 0.7;
-            lblEvolution.Opacity = 1;
             lblAbout.Opacity = 0.7;
         }
     }
