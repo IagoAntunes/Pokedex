@@ -9,8 +9,11 @@ namespace Pokedex.ViewModel
     {
         public int id { get; set; }
         public string name { get; set; }
-        public string texto { get; set; }
+        public string text { get; set; }
         public string genera { get; set; }
+        public string catch_rate { get; set; }
+        public string growth_rate { get; set; }
+        public string habitat { get; set; }
         public double height { get; set; }
         public double weight { get; set; }
         public string nameAbility { get; set; }
@@ -41,11 +44,14 @@ namespace Pokedex.ViewModel
         {
             name = pokemon.name;
             id = pokemon.id;
-            texto = pokemon.species.texto;
+            text = pokemon.species.texto;
             imagem = pokemon.sprites.other.officialartwork.front_default;
             corFundo = pokemon.corFundo;
+            catch_rate = pokemon.species.catch_rate;
             types = pokemon.types;
             genera = pokemon.species.genera;
+            growth_rate = pokemon.species.growth_rate;
+            habitat = pokemon.species.habitat;
             height = pokemon.Height/10;
             weight = pokemon.Weight/10;
             base_experience = pokemon.base_experience;

@@ -14,8 +14,8 @@
                     <Image Source="{Binding imagem}" />
                 </StackLayout>
                 <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,80,0,0">
-                    <Label  Text="{Binding id,StringFormat='#{0}'}" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
-                    <Label  Text="{Binding name}" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="25" FontAttributes="Bold"/>
+                    <Label  Text="{Binding id,StringFormat='#{0}'}" Grid.Row="0" Grid.Column="1" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                    <Label  Text="{Binding name}" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="30" FontAttributes="Bold"/>
                     <StackLayout Grid.Row="2" Grid.Column="1"  Orientation="Horizontal"  IsClippedToBounds="True">
                         <CollectionView ItemsSource="{Binding types}" x:Name="teste" ItemsLayout="HorizontalList">
                             <CollectionView.ItemTemplate>
@@ -56,26 +56,30 @@
                 <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="40" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="True" x:Name="fAbout">
                     <Grid RowDefinitions="Auto,Auto,Auto" Padding="15,0,15,15">
                         <Label HorizontalTextAlignment="Start" FontSize="16" Grid.Row="0" TextColor="Gray" LineHeight="1.2"
-                            Text="{Binding texto}"/>
+                            Text="{Binding text}"/>
                         <Grid Grid.Row="1" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
                             <Label Text="Pokédex Data" FontSize="22" Grid.Row="0" Margin="0,10,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
                             <Label Text="Species" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Height" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Weight" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
                             <Label Text="Abilities" FontSize="16" Grid.Row="4" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="Weaknesses" FontSize="16" Grid.Row="5" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Habitat" FontSize="16" Grid.Row="5" FontAttributes="Bold" TextColor="Black"/>
 
                             <Label Text="{Binding genera}" FontSize="16" Grid.Row="1" Grid.Column="1"  TextColor="Gray"/>
                             <Label Text="{Binding height,StringFormat='{0} m'}" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray"/>
                             <Label Text="{Binding weight,StringFormat='{0} Kg'}" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray"/>
                             <Label Text="{Binding nameAbility}" FontSize="16" Grid.Row="4" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding habitat}" FontSize="16" Grid.Row="5" Grid.Column="1" TextColor="Gray"/>
                         </Grid>
-                        <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto">
+                        <Grid Grid.Row="2" RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*">
                             <Label Text="Training" FontSize="22" Grid.Row="0" Margin="0,20,0,10" TextColor="{Binding corFundo}" FontAttributes="Bold"/>
                             <Label Text="Base Exp" FontSize="16" Grid.Row="1" FontAttributes="Bold" TextColor="Black"/>
-                            <Label Text="Growth Rate" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Catch Rate" FontSize="16" Grid.Row="2" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Growth Rate" FontSize="16" Grid.Row="3" FontAttributes="Bold" TextColor="Black"/>
 
-                            <Label Text="{Binding base_experience}" FontSize="16" Grid.Row="1" Grid.Column="1" TextColor="Gray"/>
+                            <Label Text="{Binding base_experience}" FontSize="16" Grid.Row="1" Grid.Column="1" TextColor="Gray" Margin="53,0,0,0"/>
+                            <Label Text="{Binding catch_rate}" FontSize="16" Grid.Row="2" Grid.Column="1" TextColor="Gray" Margin="53,0,0,0"/>
+                            <Label Text="{Binding growth_rate}" FontSize="16" Grid.Row="3" Grid.Column="1" TextColor="Gray" Margin="53,0,0,0"/>
                         </Grid>
                     </Grid>
                 </Frame>
